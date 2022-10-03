@@ -3,7 +3,9 @@ const app = express();
 const connectDb = require("./db/connect");
 const Users = require("./routes/users");
 require("dotenv").config();
+const cors = require("cors");
 // middlewares
+app.use(cors());
 app.use(express.json());
 app.use("/api/v1/users/", Users);
 // server running

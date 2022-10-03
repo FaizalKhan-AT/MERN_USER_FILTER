@@ -3,7 +3,7 @@ const User = require("../models/user");
 const getAllUsers = async (req, res) => {
   try {
     const userDetails = await User.find({});
-    res.status(200).json({ userDetails });
+    res.status(200).json({ data: userDetails });
   } catch (err) {
     res.status(500).send("Error occured...");
   }
