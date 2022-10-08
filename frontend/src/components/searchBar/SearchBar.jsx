@@ -9,6 +9,7 @@ function SearchBar({ handleSearch }) {
   };
   const handleOnDateChange = (e) => {
     setDate(e.target.value);
+    if (!e.target.value) return;
     handleSearch(new Date(e.target.value).toISOString());
   };
   return (
