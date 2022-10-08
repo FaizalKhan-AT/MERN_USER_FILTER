@@ -12,3 +12,6 @@ body {
   border-radius: 0 0 5px 5px;
   border-top: none;
 }
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}

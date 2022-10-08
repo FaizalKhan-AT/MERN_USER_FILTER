@@ -20,7 +20,12 @@ function App() {
       console.error("something went wrong ..");
     }
   };
-  const handleSearch = async (key) => {
+  const handleSearch = (key) => {
+    if (!Date.parse(key)) searchByUser(key);
+    else searchByDate(key);
+  };
+  const searchByDate = (date) => {};
+  const searchByUser = async (key) => {
     if (key === "") {
       setPerson(users);
     } else {
